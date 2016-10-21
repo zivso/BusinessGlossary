@@ -1,0 +1,26 @@
+{
+   /*"background": {
+      "persistent": false,
+      "scripts": [ "event.js" ]
+   },*/
+   "browser_action": {
+      "default_icon": "images/icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Title"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": ["findAndReplaceDOMText.js" ,  "content_script.js" ],
+      "matches": [ "\u003Call_urls>" ],
+	  "exclude_matches": [],
+      "run_at": "document_end"
+   } ],
+   "description": "Description",
+   
+   
+   "manifest_version": 2,
+   "name": "Name",
+   
+   "permissions": [ "storage" ],
+   "version": "1"
+}

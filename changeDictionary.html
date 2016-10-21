@@ -1,0 +1,89 @@
+<html>
+
+	<head>
+		<style>
+			body{
+				background-color: white;
+				font-size: 14px; color: black;font-family: Trebuchet, Arial, sans-serif;font-weight: bold;
+			}
+			.button {
+				background-color: #2F4F4F;
+				border: none;
+				color: white;
+				padding: 3px 11px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				width: 40%;
+				align-content: center;
+			}
+			
+			
+			button:hover {
+				background-color: #708090;
+			}
+			
+			.btn-file {
+				background-color: #2F4F4F;
+				border: none;
+				color: white;
+				padding: 3px 11px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				width: 40%;
+				align-content: center;
+				font-weight: normal;
+			}
+			
+		.btn-file input[type=file] {
+				opacity: 0;
+				cursor: pointer;
+				outline: none;
+				background: white;
+				cursor: pointer;
+				display: block;
+			}
+
+
+		</style>
+	<body>
+	
+	<script src='fusioncharts.js'></script>
+	<script src='jquery-1.12.0.min.js'></script>
+	
+	<p id="file_res"></p>
+	<p id="chart_res"></p>
+	<a id="link_res"></a>
+	<center>
+	<p>read from Google Sheets (Paste the Google Sheets sharing link)</p>
+	<input type="text" id="getSheet_txt" value=""/>
+	</br>
+	<input type="button" class="button" id="getSheet_btn" value="Change">
+	<script type="text/javascript" src="GoogleSheets.js"> 
+	</script>
+	</br></br></br></br>
+	<input type="button" class="button" id="update_btn" value="Update">
+	<script type="text/javascript" src="GoogleSheets.js"> </script>
+	</br></br></br></br>
+	<input type="button" class="button" id="getLink_btn" value="GetLink">
+	<script type="text/javascript" src="GoogleSheets.js"> </script>
+	</br></br></br></br>
+	
+	<span class="btn btn-default btn-file">
+    Upload <input type="file" id="fileinput" class="upload">
+	<script type="text/javascript" src="readfile.js">  </script>
+	
+</span>
+	
+</div>
+	
+	</center>
+	</body>
+</html>
