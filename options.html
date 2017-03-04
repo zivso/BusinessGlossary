@@ -1,25 +1,14 @@
 <html>
 
 	<head>
+	<link rel="stylesheet" href="/style/checkbox.css">
+	<link rel="stylesheet" href="/style/buttons.css">
 		<style>
 			body{
 				background-color: white;
 				font-size: 14px; color: black;font-family: Trebuchet, Arial, sans-serif;font-weight: bold;
 			}
-			.button {
-				background-color: #2F4F4F;
-				border: none;
-				color: white;
-				padding: 3px 11px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				margin: 4px 2px;
-				cursor: pointer;
-				width: 40%;
-				align-content: center;
-			}
+	
 			a {
 				background-color: #2F4F4F;
 				border: none;
@@ -35,35 +24,25 @@
 				align-content: center;
 			}
 			
-			.file-upload {
-				background-color: #2F4F4F;
-				border: none;
-				color: white;
-				padding: 3px 11px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				margin: 4px 2px;
-				cursor: pointer;
-				width: 40%;
-				align-content: center;
-			}
+
 		</style>
 	</head>
 	<body>
 	<center>
-		case sensetive: <input type="checkbox" id="case_cb">
-		</br>
-		first one in page: <input type="checkbox" id="first_cb">
-		</br>
-		Include/Exclude url's: <input type="checkbox" id="include_exclude_cb">
-		</br>
-		<button id="apply_btn" value="apply">apply</button>
+		<input type="checkbox" id="case_cb">
+		<label for="case_cb">case sensetive: </label>
+		</br></br>
+		<input type="checkbox" id="first_cb">
+		<label for="first_cb">first one in page: </label>
+		</br></br>
+		<input type="checkbox" id="include_exclude_cb">
+		<label for="include_exclude_cb">Include/Exclude url's: </label>
+		</br></br>
+		<button id="apply_btn" class="button" value="apply">apply</button>
+		</br></br>
 		<script type="text/javascript" src="options.js"></script>
 		<a href="exclude.html">exclude url</a>
 		<a href="include.html">include url</a>
 	</center>
-	
 	</body>
 </html>

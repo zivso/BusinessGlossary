@@ -1,0 +1,45 @@
+
+			.button {
+				background-color: #2F4F4F;
+				border: none;
+				color: white;
+				padding: 3px 11px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				width: 40%;
+				align-content: center;
+			}
+			
+			
+			button:hover {
+				background-color: #708090;
+			}
+			
+			.btn-file {
+				background-color: #2F4F4F;
+				border: none;
+				color: white;
+				padding: 3px 11px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				width: 40%;
+				align-content: center;
+				font-weight: normal;
+			}
+			
+		.btn-file input[type=file] {
+				opacity: 0;
+				cursor: pointer;
+				outline: none;
+				background: white;
+				cursor: pointer;
+				display: block;
+			}

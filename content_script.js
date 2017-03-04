@@ -32,6 +32,9 @@ chrome.storage.sync.get('enable', function(data){
 	}else{
 		checkExcludedUrl();
 	}
+	console.log("case: " + caseSensitive);
+	console.log("first: " + firstInPage);
+	console.log("include/exclude: " + includeOrExclude);
 	
 	//replacePage();
 	/*setTimeout(function(){
@@ -353,9 +356,19 @@ function check(word){
 function search(word, list){
 	if(list != undefined){
 		for(var i =0; i < list.length; i++){
-			if(list[i][0] == word){
+			//checking if its not case sensetive
+			if(caseSensitive == false){
+				if(list[i][0].toLowerCase() == word.toLowerCase()){
+					return(i);
+				}
+			}
+			//if its case sensitive
+			else{
+				if(list[i][0] == word){
 				return(i);
 			}
+			}
+			
 		}
 		return(-1);
 	}else{
