@@ -28,11 +28,14 @@ function save(){
 	var list = final_URL_txt.split(",").sort();
 	final_URL_txt = list.join(", ");
 	//saving the final urls
-	chrome.storage.sync.set({'included_URLs' : final_URL_txt}, function(){});
-	//location.reload();
-	//chrome.tabs.query({active: true, currentWindow: true}, function (arrayOfTabs) {
-    //chrome.tabs.reload(arrayOfTabs[0].id);
-//});
+	console.log(final_URL_txt);
+	chrome.storage.sync.set({'included_URLs' : final_URL_txt}, function(){
+		console.log("saved your included url list");
+	});
+	location.reload();
+	chrome.tabs.query({active: true, currentWindow: true}, function (arrayOfTabs) {
+    chrome.tabs.reload(arrayOfTabs[0].id);
+});
 	
 }
 
@@ -40,7 +43,7 @@ function addURL(){
 	var url = document.getElementById("URL_txt").value;
 	chrome.storage.sync.get('included_URLs', function(data){
 		var text = "";
-		if(data.included_URLs.length > 0){
+		if(data.included_URLs != null && data.included_URLs.length > 0){
 			text = data.included_URLs;
 			text += ", ";
 		}

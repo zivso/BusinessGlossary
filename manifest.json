@@ -9,7 +9,8 @@
       "default_title": "Title"
    },
    "content_scripts": [ {
-      "all_frames": true,
+     "all_frames" : false,
+     "run_at" : "document_end",
       "js": ["findAndReplaceDOMText.js" ,  "content_script.js" ],
       "matches": [ "\u003Call_urls>" ],
 	  "exclude_matches": [],
@@ -19,7 +20,7 @@
    
    
    "manifest_version": 2,
-   "name": "Name",
+   "name": "Business Glossary",
    
    "permissions": [ "storage" ],
    "version": "1"

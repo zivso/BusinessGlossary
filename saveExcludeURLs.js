@@ -40,7 +40,7 @@ function addURL(){
 	var url = document.getElementById("URL_txt").value;
 	chrome.storage.sync.get('exclude_URLs', function(data){
 		var text = "";
-		if(data.exclude_URLs.length > 0){
+		if(data.included_URLs != null && data.exclude_URLs.length > 0){
 			text = data.exclude_URLs;
 			text += ", ";
 		}
